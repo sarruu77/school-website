@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIA ISLAMIC SCHOOL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+        }
+        
+        header {
+            background-color: blue;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav {
+            margin: 10px;
+        }
+        
+        nav a {
+            margin: 15px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        .section {
+            display: none;
+            /* Initially hide all sections */
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.getElementsByClassName('section');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none'; // Hide all sections
+            }
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+        window.onload = function() {
+            showSection('admission'); // Show admission section by default
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>ZIA ISLAMIC SCHOOL</h1>
+        <nav>
+            <a href="javascript:void(0);" onclick="showSection('admission')">Admission</a>
+            <a href="javascript:void(0);" onclick="showSection('events')">Events</a>
+            <a href="javascript:void(0);" onclick="showSection('fees')">Fees Criteria</a>
+            <a href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
+            <a href="javascript:void(0);" onclick="showSection('records')">Records</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="admission" class="section">
+            <h2>Admission</h2>
+            <form>
+                <label for="studentName">Student Name:</label><br>
+                <input type="text" id="studentName" name="studentName" required><br>
+                <label for="fatherName">Father's Name:</label><br>
+                <input type="text" id="fatherName" name="fatherName" required><br>
+                <label for="classType">Class Type:</label><br>
+                <input type="text" id="classType" name="classType" required><br>
+                <label for="contactInfo">Contact Information:</label><br>
+                <input type="text" id="contactInfo" name="contactInfo" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="events" class="section">
+            <h2>Events</h2>
+            <form>
+                <label for="eventTitle">Event Title:</label><br>
+                <input type="text" id="eventTitle" name="eventTitle" required><br>
+                <label for="eventDate">Event Date:</label><br>
+                <input type="date" id="eventDate" name="eventDate" required><br>
+                <label for="eventPhoto">Upload Event Photo:</label><br>
+                <input type="file" id="eventPhoto" name="eventPhoto"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="fees" class="section">
+            <h2>Fees Criteria</h2>
+            <p>You can decide the fees criteria here. Please specify your requirements in your IDE.</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Information</h2>
+            <p>Email: info@ziaislamicschool.edu</p>
+            <p>Phone: +123456789</p>
+            <p>Address: 123 School Lane, Education City</p>
+        </div>
+
+        <div id="records" class="
